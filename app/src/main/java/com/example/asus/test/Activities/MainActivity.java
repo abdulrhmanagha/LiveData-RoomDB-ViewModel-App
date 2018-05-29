@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         mViewModel.getListItems().observe(this, items -> {
             // update DataSet
-            Log.e(TAG,"_AdapterIsUpdatedFromViewModel");
+            Log.e(TAG,"_AdapterIsUpdated");
             list.clear(); list.addAll(mViewModel.getListItems().getValue());
             adapter.notifyDataSetChanged();
         });
